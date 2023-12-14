@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="../App/res/css/firststyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nvg">
+                    <li><a href=" ">home</a></li>
+                    <li><a href=" ">novelties</a></li>
+                    <li><a href=" ">products</a></li>
+                    <li><a href=" ">about us</a></li>
+                    <li><a href=" ">contacts</a></li>
+                </ul>
+                <input type="image" id="accbtn" class="accimg" src="../App/res/img/AccountImg.svg"/>
+            </nav>
+        </header>
+        <div class="line"></div>
+        <img class="bgimg"  src="../App/res/img/LPF.svg">
+        <div class="lipstick">
+            <img class="lipstick2" src="../App/res/img/Lipstick2.svg">
+            <img class="lipstick1" src="../App/res/img/Lipstick1.svg"> 
+            <img class="lipstick2_1" src="../App/res/img/Lipstick2_1.svg">
+        </div>
+        <div id="reg" class="reg">
+            <div id="regform" class="form">
+                <form id="form" novalidate>
+                    <div class="regform">
+                        <label for="username">username</label>
+                        <input id="username" class="field" type="text" name="username" required minlength="4" maxlength="20">
+                        <span id="uhint" class="error" aria-live="polite">the username must be longer than 4 characters and shorter than 20</span>
+
+                        <label for="email">e-mail</label>
+                        <input id="email" class="field" type="email" name="email" required>
+                        <span id="ehint" class="error" aria-live="polite">example: smbd@smth.com</span>
+
+                        <label for="pswd">password</label>
+                        <input id="pswd" class="field" type="password" name="pswd" required required minlength="8" maxlength="20">
+                        <span id="phint" class="error" aria-live="polite"></span>
+
+                        <label for="cnfpswd">confirm password</label>
+                        <input id="cnfpswd" class="field" type="password" name="cnfpswd" required required minlength="8" maxlength="20">
+                        <span id="cphint" class="error" aria-live="polite">dfgdfgd</span>
+
+                        <input class="sign" type="submit" value="sign up">
+                    </div>
+                </form>
+                <img src="../App/res/img/Register1.svg" alt="">  
+            </div>
+        </div>
+        <script type="text/javascript" src="../App/js/bgimg.js"></script>
+        <script type="text/javascript" src="../App/js/form.js"></script>
+    </body>
+</html>

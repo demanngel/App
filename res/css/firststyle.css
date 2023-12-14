@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "AgencyFB";
+    src: url("../fonts/AgencyFB_reg.woff2") format(woff2),
+    url("../fonts/AgencyFB_reg.woff") format(woff);
+}
+
+@font-face {
+    font-family: "Mark Squard";
+    src: url("../fonts/Mark-Squad.woff2") format(woff2),
+    url("../fonts/Mark-Squad.woff") format(woff);
+}
+
+body {
+    background-image: url("../img/Background.svg");
+    background-size: contain;
+    image-rendering: pixelated;
+    font-family: "AgencyFB";
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    position: static;
+    background-color: #292929;
+    opacity: 60%;
+    width: 100%;
+    max-height: 90px;
+    display: flex;
+    z-index: 3;
+    }
+
+.line {position: fixed;background-color: #1E1E1E;width: 100%;height: 1px;}
+
+.nvg {
+    display: inline-flex;
+    padding: 0;
+}
+
+ .nvg li {
+    list-style-type: none;
+    color: #D6D6D6;
+    font-size: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 35px;
+ }
+
+ a {
+    color: #D6D6D6;
+ }
+
+ .nvg li a {
+    text-decoration: none;
+ }
+
+ nav {
+    margin: auto;
+    position: relative;
+}
+
+.accimg {
+    max-width: 25px;
+    position: absolute;
+    margin-left: 25%;
+    margin-right: 25%;
+    top: 25%;
+}
+
+.bgimg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -40%);
+}
+
+.lipstick {
+    position: relative;
+    z-index: 2;
+}
+
+.lipstick1 {
+    position: absolute;
+    top: 300px;
+    left: -150px;
+    animation-name: lipstick1;
+    animation-duration: 5s;
+}
+
+.lipstick2 {
+    position: absolute;
+    top: -40px;
+    right: -150px;
+    animation-name: lipstick2;
+    animation-duration: 5s;
+}
+
+.lipstick2_1 {
+    position: absolute;
+    top: -40px;
+    right: -150px;
+    animation-name: lipstick2;
+    animation-duration: 5s;
+}
+
+@keyframes lipstick1 {
+    0% {
+        top: 123px;
+        left: 401px;
+    }
+    100% {
+        top: 300px;
+        left: -150px;
+    }
+}
+
+@keyframes lipstick2 {
+    0% {
+        top: 120px;
+        right: 400px;}
+    100% {
+        top: -40px;
+        right: -150px;
+    }
+}
+
+.reg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.regform {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.regform label {
+    display: block;
+    color: #1E1E1E;
+    font-size: 30px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.regform input {
+    display: block;
+    font-family: "AgencyFB";
+    margin-bottom: 4px;
+    padding: 5px;
+    outline-color: #4E4E4E;
+    border-radius: 3px;
+}
+
+.regform input:invalid {
+    outline-color: #A63139;
+}
+
+.field {
+    background-color: #D9D9D9;
+    color: #4E4E4E;
+    width: 350px;
+    height: 25px;
+    font-size: 25px;
+    border-width: 0;
+}
+
+.sign {
+    width: 150px;
+    height: 50px;
+    background-color: #AAAAAA;
+    margin: auto;
+    color: #1E1E1E;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.error {
+    height: 15px;
+    width: 350px;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+#uhint {
+    display: none;
+}
+
+#ehint {
+    display: none;
+}
+
+#phint {
+    display: none;
+}
+
+#cphint {
+    display: none;
+}
