@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="./res/css/firststyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nvg">
+                    <li><a href="/">home</a></li>
+                    <li><a href="">novelties</a></li>
+                    <li><a href="/products">products</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">contacts</a></li>
+                </ul>
+                <input type="image" id="accbtn" class="accimg" src="./res/img/AccountImg.svg"/>
+            </nav>
+        </header>
+        <div class="line"></div>
+        <div class="aboutus">
+            <p>Welcome to LFU, where innovation meets beauty! We take pride in being pioneers in the world of cosmetics, dedicated to crafting and delivering groundbreaking lip products that redefine the beauty industry.</p>
+            <p>What sets us apart is our relentless pursuit of excellence in both formula and design. Our team of passionate experts combines cutting-edge technology with the latest trends to develop lip products that are not only high-performing but also visually stunning. From vibrant hues to luxurious textures, each product is a testament to our dedication to quality and creativity.</p> 
+            <p>We believe in beauty that is inclusive and sustainable. Our formulations are cruelty-free and created with the utmost care for the environment. We strive to make a positive impact on both your beauty routine and the world around us.
+            <p>Indulge in the future of cosmetics with LFU. Because when it comes to innovation in beauty, we are always one step ahead.</p>
+        </div>
+        
+        <script type="text/javascript" src="./js/onChange.js"></script>
+        <div id="reg" class="reg">
+            <div id="form" class="form">
+                <form id="loginform" class="loginform" novalidate method="GET" action="/signin">
+                    <label for="email">email</label>
+                    <input id="_email" class="field" type="email" name="email" required>
+
+                    <label for="password">password</label>
+                    <input id="_password" class="field" type="password" name="password" required minlength="8" maxlength="20">
+
+                    <input class="sub" type="submit" value="sign in">
+
+                     <div class="regtext">
+                        <p>for the first time on our website?</p>
+                        <button id="regbtn">create an account</button>
+                    </div>
+                </form>
+                <form id="regform" class="regform" novalidate method="POST" action="/signup">
+                    <label for="username">username</label>
+                    <input id="username" class="field" type="text" name="username" placeholder="from 4 to 20 characters" required minlength="4" maxlength="20" onchange="onChange('username')">
+      
+                    <label for="email">e-mail</label>
+                    <input id="email" class="field" type="email" name="email" placeholder="example: smbd@smth.com" required onchange="onChange('email')">
+                   
+                    <label for="password">password</label>
+                    <input id="password" class="field" type="password" name="password" placeholder="from 8 to 20 characters" required required minlength="8" maxlength="20" onchange="onChange('password')">
+                    
+                    <label for="confirmpassword">confirm password</label>
+                    <input id="confirmpassword" class="field" type="password" name="confirmpassword" placeholder="" required minlength="8" maxlength="20" onchange="onChange('confirmpassword')">
+                    
+                    <input class="sub" type="submit" value="sign up">
+                </form>
+                <img src="./res/img/Register1.svg" alt="">  
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/homepage.js"></script>
+    </body>
+</html>

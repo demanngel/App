@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="./res/css/firststyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nvg">
+                    <li><a href="/">home</a></li>
+                    <li><a href="">novelties</a></li>
+                    <li><a href="/products">products</a></li>
+                    <li><a href="/aboutus">about us</a></li>
+                    <li><a href="">contacts</a></li>
+                </ul>
+                <input type="image" id="accbtn" class="accimg" src="./res/img/AccountImg.svg"/>
+            </nav>
+        </header>
+        <div class="line"></div>
+
+        <div class="product-container">
+            <% products.forEach(function(product) { %>
+              <div class="product">
+                <img src="../res/img/products/<%= product.img%>" alt="<%= product.name %>">
+                <div class="product-info">
+                    <%= product.name %> <%= product.cost %> 
+                </div>               
+              </div>
+            <% }); %>
+            <div class="bt"></div>
+          </div>
+
+        
+          <script type="text/javascript" src="./js/onChange.js"></script>
+          <div id="reg" class="reg">
+              <div id="form" class="form">
+                  <form id="loginform" class="loginform" novalidate method="GET" action="/signin">
+                      <label for="email">email</label>
+                      <input id="_email" class="field" type="email" name="email" required>
+  
+                      <label for="password">password</label>
+                      <input id="_password" class="field" type="password" name="password" required minlength="8" maxlength="20">
+  
+                      <input class="sub" type="submit" value="sign in">
+  
+                       <div class="regtext">
+                          <p>for the first time on our website?</p>
+                          <button id="regbtn">create an account</button>
+                      </div>
+                  </form>
+                  <form id="regform" class="regform" novalidate method="POST" action="/signup">
+                      <label for="username">username</label>
+                      <input id="username" class="field" type="text" name="username" placeholder="from 4 to 20 characters" required minlength="4" maxlength="20" onchange="onChange('username')">
+        
+                      <label for="email">e-mail</label>
+                      <input id="email" class="field" type="email" name="email" placeholder="example: smbd@smth.com" required onchange="onChange('email')">
+                     
+                      <label for="password">password</label>
+                      <input id="password" class="field" type="password" name="password" placeholder="from 8 to 20 characters" required required minlength="8" maxlength="20" onchange="onChange('password')">
+                      
+                      <label for="confirmpassword">confirm password</label>
+                      <input id="confirmpassword" class="field" type="password" name="confirmpassword" placeholder="" required minlength="8" maxlength="20" onchange="onChange('confirmpassword')">
+                      
+                      <input class="sub" type="submit" value="sign up">
+                  </form>
+                  <img src="./res/img/Register1.svg" alt="">  
+              </div>
+          </div>
+          <script type="text/javascript" src="./js/homepage.js"></script>
+    </body>
+</html>

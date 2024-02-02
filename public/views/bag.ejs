@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="./res/css/firststyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nvg">
+                    <li><a href="/user">home</a></li>
+                    <li><a href="">novelties</a></li>
+                    <li><a href="/userproducts">products</a></li>
+                    <li><a href="/useraboutus">about us</a></li>
+                    <li><a href="">contacts</a></li>
+                </ul>
+                <input type="image" id="accbtn" class="accimg" src="./res/img/AccountImg.svg"/>
+            </nav>
+        </header>
+        <div class="line"></div>
+
+        <form action="">
+            <div class="cart-container">
+                <table>
+                    <tbody>
+                        <% cartItems.forEach(function(item, index) { %>
+                        <tr>
+                            <td><img class="prodimg" src="../res/img/products/<%= item.img %>"></td>
+                            <td><%= item.name %></td>
+                            <td><%= item.cost %>$</td>
+                            <td><input id="check" type="checkbox" name="products" value="<%=item.id_p%>" checked> </td>
+                            <input type="hidden" name="pbag" value="<%= item.id%>">
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+                <input class="sub" type="submit" value="pay" formaction="/payprod" formmethod="post">
+                <input class="sub" type="submit" value="delete" formaction="/delprod" formmethod="post">
+                <div class="bt"></div>
+            </div>
+        </form>
+        
+
+        <div id="side_bar" class="side_bar">
+            <div id="bar" class="bar">
+                <div class="menu">
+                    <a href="/profile">profile</a>
+                    <a href="/bag">my bag</a>
+                    <a href="/orders">order history</a>
+                    <a href="">gift cards</a>
+                    <a href="">surprise box</a>
+                    <a href="">determine my colortype</a>
+                    <a href="">support</a>
+                    <a href="/logout">exit</a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/adminhomepage.js"></script>
+    </body>
+</html>

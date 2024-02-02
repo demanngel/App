@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="./res/css/firststyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nvg">
+                    <li><a href="/admin">home</a></li>
+                    <li><a href="">novelties</a></li>
+                    <li><a href="">products</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">contacts</a></li>
+                </ul>
+                <input type="image" id="accbtn" class="accimg" src="./res/img/AccountImg.svg"/>
+            </nav>
+        </header>
+        <div class="line"></div>
+
+        <div class="cart-container">
+            <table>
+                <tbody>
+                    <% users.forEach(function(item, index) { %>
+                    <tr>
+                        <td><%= item.username %></td>
+                        <td><%= item.email %>$</td>
+                        <td><%= item.type %>$</td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="side_bar" class="side_bar">
+            <div id="bar" class="bar">
+                <div class="menu">
+                    <a href="/adminusers">users</a>
+                    <a href="">products</a>
+                    <a href="">statistic</a>
+                    <a href="">orders</a>
+                    <a href="">support</a>
+                    <a href="">exit</a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/adminhomepage.js"></script>
+    </body>
+</html>
